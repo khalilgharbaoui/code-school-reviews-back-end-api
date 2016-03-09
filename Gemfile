@@ -45,6 +45,7 @@ group :development, :test do
 
   gem 'terminal-notifier-guard'
   gem 'shoulda-matchers'
+  gem 'factory_girl'
 
 end
 
