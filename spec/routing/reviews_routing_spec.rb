@@ -1,0 +1,11 @@
+require 'rails_helper'
+
+
+
+RSpec.describe ReviewsController, type: :routing do
+  it { should route(:get, '/codeschools/1/reviews').to(action: :index) }
+  it { should route(:post, '/codeschools/1/reviews').to(action: :create)}
+  it { should route(:get, '/codeschools/1/reviews/1').to(action: :show, id: 1) }
+  it { should route(:patch, '/codeschools/1/reviews/1').to(action: :update, id: 1)}
+  it { should route(:delete, '/codeschools/1/reviews/1').to(action: :destroy, id: 1)}
+end
