@@ -70,3 +70,5 @@ gem 'carrierwave'
 gem 'rack-cors', require: 'rack/cors'
 
 gem 'puma'
+
+gem 'carrierwave-base64'
