@@ -60,7 +60,7 @@ class CodeschoolsController < ApplicationController
     end
   end
 
-  # private params area
+  # private params area!!
   private
 
   def codeschool_params
