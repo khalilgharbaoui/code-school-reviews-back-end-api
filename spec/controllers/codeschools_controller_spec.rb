@@ -49,10 +49,18 @@ RSpec.describe CodeschoolsController, type: :controller do
   end
 
   describe "#update" do
-    it "can process a update" do
-      patch :update, id: :codeschool.to_param, codeschool: { name: "updated" }
+    it "can process an update" do
+      patch :update, id: 1, codeschool: { name: "updated" }
       json = JSON.parse(response.body)
       expect(json['codeschool']['name']).to eq "updated"
+    end
+  end
+
+  describe "#destroy" do
+    it "can remove a codeschool" do
+      delete :destroy, id: 1
+      json = JSON.parse(response.body)
+      expect(json['codeschool']).to eq nil
     end
   end
 
