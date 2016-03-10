@@ -1,15 +1,13 @@
 class CodeschoolsController < ApplicationController
-
-  #main index
+  # main index
   def index
     render json: {
-      meta:{
+      meta: {
         count: Codeschool.count,
         page: 0
       },
       codeschools: Codeschool.order(:name)
     }
-
   end
 
   # singular show page
@@ -18,19 +16,19 @@ class CodeschoolsController < ApplicationController
     render json: { codeschool: codeschool }
   end
 
-  #create methode
+  # create methode
   def create
     if codeschool = Codeschool.create(codeschool_params)
       render json: { codeschool: codeschool }
     else
       render json: {
-        message: "Could not create a new codeschool",
-        errors: codeschool.errors,
+        message: 'Could not create a new codeschool',
+        errors: codeschool.errors
       }, status: :unprocessible_entity
     end
   end
 
-  #update methode
+  # update methode
   def update
     codeschool = Codeschool.find(params[:id])
 
@@ -38,11 +36,13 @@ class CodeschoolsController < ApplicationController
       render json: { codeschool: codeschool }
     else
       render json: {
-        message: "Could not update the codeschool",
-        errors: project.errors,
-      },status: :unprocessible_entity
+        message: 'Could not update the codeschool',
+        errors: project.errors
+      }, status: :unprocessible_entity
     end
   end
+  
+  # destroy methode
 
   def destroy
     codeschool = Codeschool.find(params[:id])
@@ -50,11 +50,12 @@ class CodeschoolsController < ApplicationController
       render json: { codeschool: nil }
     else
       render json: {
-        message: "Could not destroy the codeschool, please try again"
+        message: 'Could not destroy the codeschool, please try again'
       }, status: :unprocessible_entity
     end
   end
 
+  # private params area
   private
 
   def codeschool_params
