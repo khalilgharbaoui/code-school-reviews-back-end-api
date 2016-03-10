@@ -17,7 +17,6 @@ class ReviewsController < ApplicationController
     render json: { review: review }
   end
 
-
   # create methode
   def create
     review = Review.new(review_params)

@@ -7,7 +7,7 @@ class CodeschoolsController < ApplicationController
         count: Codeschool.count,
         page: 0
       },
-      codeschools: codeschools.as_json({include: :reviews, methods: :average_rating})
+      codeschools: codeschools.as_json(include: :reviews, methods: :average_rating)
     }
   end
 
@@ -16,8 +16,8 @@ class CodeschoolsController < ApplicationController
     codeschool = Codeschool.find(params[:id])
     average_rating = codeschool.average_rating
     render json: {
-       codeschool: codeschool,
-       average_rating: average_rating
+      codeschool: codeschool,
+      average_rating: average_rating
     }
   end
 
@@ -62,8 +62,6 @@ class CodeschoolsController < ApplicationController
 
   # private params area
   private
-
-
 
   def codeschool_params
     params.require(:codeschool).permit(:name, :logo, :description, :url)
