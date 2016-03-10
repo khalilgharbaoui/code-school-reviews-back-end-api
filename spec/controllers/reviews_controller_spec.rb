@@ -40,11 +40,11 @@ RSpec.describe ReviewsController, type: :controller do
       end
     end
   end
-  # describe '#update' do
-  #   it 'can process a update' do
-  #     patch :update, id: 1, codeschool_id: 1, review: { name: 'Changed' }
-  #     json = JSON.parse(response.body)
-  #     expect(json['review']['name']).to eq 'Changed'
-  #   end
-  # end
+  describe '#update' do
+    it 'can process a update' do
+      patch :update, id: 1, codeschool_id: 1, review: { name: 'Changed' }
+      json = JSON.parse(response.body)
+      expect(json['review']['name']).to eq 'Changed'
+    end
+  end
 end

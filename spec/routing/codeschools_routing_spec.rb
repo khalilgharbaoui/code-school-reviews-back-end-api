@@ -1,6 +1,7 @@
 require 'rails_helper'
-
-
+include FactoryGirl::Syntax::Methods
+build(:review)
+build(:codeschool)
 RSpec.describe CodeschoolsController, type: :routing do
   it { should route(:get, '/').to(action: :index) }
   it { should route(:post, '/codeschools').to(action: :create)}

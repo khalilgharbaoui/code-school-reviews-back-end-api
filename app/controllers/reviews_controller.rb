@@ -22,7 +22,7 @@ class ReviewsController < ApplicationController
   def create
     review = Review.new(review_params)
     review.codeschool = @codeschool
-    
+
     if review.save
       render json: { review: review }
     else
