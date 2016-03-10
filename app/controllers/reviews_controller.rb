@@ -7,7 +7,7 @@ class ReviewsController < ApplicationController
         count: @codeschool.reviews.count,
         page: 0
       },
-      reviews: @codeschool.reviews.order(:created_at)
+      reviews: @codeschool.reviews.all.order(:created_at)
     }
   end
 
@@ -62,6 +62,10 @@ class ReviewsController < ApplicationController
 
   # private params area
   private
+
+  def average_rating
+    Review.average(:rating)
+  end
 
   def set_codeschool
     @codeschool = Codeschool.find(params[:codeschool_id])

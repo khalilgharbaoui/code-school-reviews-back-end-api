@@ -28,9 +28,10 @@ Rails.application.routes.draw do
 
   # Example resource route with sub-resources:
   resources :codeschools, except: [:new, :edit] do
-    resources :reviews, except: [:new, :edit]
+    resources :reviews, except: [:new, :edit] do
+    end
   end
-
+  
 
   # Example resource route with more complex sub-resources:
   #   resources :products do

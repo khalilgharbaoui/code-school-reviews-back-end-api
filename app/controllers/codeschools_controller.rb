@@ -1,19 +1,24 @@
 class CodeschoolsController < ApplicationController
   # main index
   def index
+    codeschools = Codeschool.order(id: :asc)
     render json: {
       meta: {
         count: Codeschool.count,
         page: 0
       },
-      codeschools: Codeschool.order(:name)
+      codeschools: codeschools.as_json({include: :reviews, methods: :average_rating})
     }
   end
 
   # singular show page
   def show
     codeschool = Codeschool.find(params[:id])
-    render json: { codeschool: codeschool }
+    average_rating = codeschool.average_rating
+    render json: {
+       codeschool: codeschool,
+       average_rating: average_rating
+    }
   end
 
   # create methode
@@ -57,6 +62,8 @@ class CodeschoolsController < ApplicationController
 
   # private params area
   private
+
+
 
   def codeschool_params
     params.require(:codeschool).permit(:name, :logo, :description, :url)
