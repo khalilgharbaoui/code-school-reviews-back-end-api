@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 
-RSpec.describe CodeschoolController, type: :controller do
+RSpec.describe CodeschoolsController, type: :controller do
   it { should route(:get, '/').to(action: :index) }
   it { should route(:get, '/codeschools/1').to(action: :show, id: 1) }
   it { should route(:post, '/codeschools').to(action: :create)}

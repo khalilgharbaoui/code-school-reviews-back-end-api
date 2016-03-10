@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
-
+  root 'codeschools#index'
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -28,10 +28,10 @@ Rails.application.routes.draw do
 
   # Example resource route with sub-resources:
   resources :codeschools, except: [:new, :edit] do
-    resources :reviews, except: [:new, :edit] do
-    end
+    #resources :reviews, except: [:new, :edit]
   end
-  
+
+
   # Example resource route with more complex sub-resources:
   #   resources :products do
   #     resources :comments
