@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'codeschools#index'
-  
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -28,7 +28,7 @@ Rails.application.routes.draw do
 
   # Example resource route with sub-resources:
   resources :codeschools, except: [:new, :edit] do
-    #resources :reviews, except: [:new, :edit]
+    resources :reviews, except: [:new, :edit]
   end
 
 
