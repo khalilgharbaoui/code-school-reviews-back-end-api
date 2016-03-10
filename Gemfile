@@ -66,3 +66,7 @@ group :production do
 end
 #picture uploader
 gem 'carrierwave'
+
+gem 'rack-cors', require: 'rack/cors'
+
+gem 'puma'
