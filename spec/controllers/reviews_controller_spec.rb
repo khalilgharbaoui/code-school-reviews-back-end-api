@@ -31,6 +31,14 @@ RSpec.describe ReviewsController, type: :controller do
       expect(response.header['Content-Type']).to include('application/json')
     end
   end
+
+  describe "#show" do
+    it "has a valid show method" do
+      get :show, id: 1, codeschool_id: 1
+      expect(response).to be_success
+    end
+  end
+  
   describe '#create' do
     context 'with valid params' do
       it 'creates a new Task' do
@@ -45,6 +53,13 @@ RSpec.describe ReviewsController, type: :controller do
       patch :update, id: 1, codeschool_id: 1, review: { name: 'Changed' }
       json = JSON.parse(response.body)
       expect(json['review']['name']).to eq 'Changed'
+    end
+  end
+  describe "#destroy" do
+    it "can remove a review" do
+      delete :destroy, id: 1, codeschool_id: 1
+      json = JSON.parse(response.body)
+      expect(json['review']).to eq nil
     end
   end
 end
