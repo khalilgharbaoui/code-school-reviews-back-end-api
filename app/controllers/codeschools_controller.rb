@@ -57,7 +57,7 @@ class CodeschoolsController < ApplicationController
 
   # private params area
   private
-  
+
   def codeschool_params
     params.require(:codeschool).permit(:name, :logo, :description, :url)
   end
