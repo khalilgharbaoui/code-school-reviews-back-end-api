@@ -37,11 +37,11 @@ class CodeschoolsController < ApplicationController
     else
       render json: {
         message: 'Could not update the codeschool',
-        errors: project.errors
+        errors: codeschool.errors
       }, status: :unprocessible_entity
     end
   end
-  
+
   # destroy methode
 
   def destroy
@@ -57,7 +57,7 @@ class CodeschoolsController < ApplicationController
 
   # private params area
   private
-
+  
   def codeschool_params
     params.require(:codeschool).permit(:name, :logo, :description, :url)
   end
