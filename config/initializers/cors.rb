@@ -1,19 +1,19 @@
 class CodeSchoolReviews::Application
-  config.middleware.insert_before 0, "Rack::Cors", debug: true, logger: (-> { Rails.logger}) do
+  config.middleware.insert_before 0,  "Rack::Cors", debug: true, logger: (-> { Rails.logger }) do
     allow do
       origins 'localhost:3000', '127.0.0.1:3000',
-      /\Ahttp:\/\/192\.168.\.0\.\d{1,3}(:\d+)?\z/
+        /\Ahttp:\/\/192\.168\.0\.\d{1,3}(:\d+)?\z/, 'http://codeschoolreviews.bitballoon.com', 'http://codeschoolreviews.bitballoon.com/massagesalons'
 
       resource '/cors',
-      headers: :any,
-      methods:[:post],
-      credentials: true,
-      max_age: 0
+        headers: :any,
+        methods: [:post],
+        credentials: true,
+        max_age: 0
 
       resource '*',
-      hearders: :any,
-      methodes: [:get, :post, :delete, :put, :patch, :options, :head],
-      max_age: 0
+        headers: :any,
+        methods: [:get, :post, :delete, :put, :patch, :options, :head],
+        max_age: 0
     end
   end
 end
