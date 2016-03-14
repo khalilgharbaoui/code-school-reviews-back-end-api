@@ -1,7 +1,7 @@
 class CodeschoolsController < ApplicationController
   # main index
   def index
-    codeschools = Codeschool.order(id: :asc)
+    codeschools = Codeschool.order(id: :desc)
     render json: {
       meta: {
         count: Codeschool.count,
