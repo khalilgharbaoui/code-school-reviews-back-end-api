@@ -17,5 +17,5 @@ Review.create!([
   {name: "Jade doe", description: "very nice!!😁", rating: 3, codeschool_id: 5},
   {name: "John doe", description: "very nice", rating: 1, codeschool_id: 7},
   {name: "Jade doe", description: "very nice!!😁", rating: 5, codeschool_id: 8},
-  {name: "Samuel L Jackson", description: "very nice!!😁", rating: 0, codeschool_id: 8}
+  {name: "Samuel L Jackson", description: "very nice!!😁", rating: 5, codeschool_id: 8}
 ])
