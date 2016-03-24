@@ -1,23 +1,14 @@
 # encoding: utf-8
 
-<<<<<<< HEAD
-class LogoUploader < CarrierWave::Uploader::GoogleDrive
 
-  google_login    'kaygeee@gmail.com'
-  google_password 'Vegeta11!!@@'
-||||||| merged common ancestors
 class LogoUploader < CarrierWave::Uploader::Base
-=======
-class LogoUploader < CarrierWave::Uploader::GoogleDrive
 
-  google_login    ''
-  google_password '***REMOVED***'
->>>>>>> 1add0f6d66f867b03558c9b2b8e4a5bbe2a5baa8
+
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
-  
+
   # Choose what kind of storage to use for this uploader:
   storage :file
   # storage :fog
