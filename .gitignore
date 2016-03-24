@@ -11,4 +11,4 @@
 /log/*
 !/log/.keep
 /tmp
-/app/uploaders/logo_uploader.rb
+/app/uploaders/*
