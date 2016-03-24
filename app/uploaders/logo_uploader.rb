@@ -2,7 +2,7 @@
 
 class LogoUploader < CarrierWave::Uploader::GoogleDrive
 
-  google_login    '***REMOVED***'
+  google_login    ''
   google_password '***REMOVED***'
 
   # Include RMagick or MiniMagick support:
