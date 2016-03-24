@@ -1,6 +1,9 @@
 # encoding: utf-8
 
-class LogoUploader < CarrierWave::Uploader::Base
+class LogoUploader < CarrierWave::Uploader::GoogleDrive
+
+  google_login    'kaygeee@gmail.com'
+  google_password 'Vegeta11!!@@'
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick

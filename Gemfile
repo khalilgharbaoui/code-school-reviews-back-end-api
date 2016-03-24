@@ -72,3 +72,4 @@ gem 'rack-cors', require: 'rack/cors'
 gem 'puma'
 
 gem 'carrierwave-base64'
+gem 'carrierwave-google_drive'
