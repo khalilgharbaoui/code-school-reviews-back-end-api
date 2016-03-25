@@ -52,6 +52,8 @@ end
 group :test, :darwin do
   gem 'rb-fsevent'
 end
+#codeclimate-test-reporter gem
+gem "codeclimate-test-reporter", group: :test, require: nil
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
