@@ -1,8 +1,9 @@
 FactoryGirl.define do
   factory :review do
-    name "Reviewer Name"
-    description "This is the best school ever..."
-    rating 3
-    codeschool_id 1
+
+    name Faker::Name.name
+    description Faker::Hipster.sentence
+    rating Faker::Number.between(0, 5)
+    codeschool_id :codeschool
   end
 end

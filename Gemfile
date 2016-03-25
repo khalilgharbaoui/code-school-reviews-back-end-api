@@ -46,6 +46,7 @@ group :development, :test do
   gem 'terminal-notifier-guard'
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
+  gem 'faker'
 end
 
 group :test, :darwin do
@@ -66,10 +67,9 @@ group :production do
 end
 #picture uploader
 gem 'carrierwave'
-
-gem 'rack-cors', require: 'rack/cors'
-
-gem 'puma'
-
 gem 'carrierwave-base64'
 gem 'carrierwave-google_drive'
+
+#middleware and http concurency server
+gem 'rack-cors', require: 'rack/cors'
+gem 'puma'
