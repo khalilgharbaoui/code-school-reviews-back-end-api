@@ -5,7 +5,7 @@ class CodeschoolsController < ApplicationController
     render json: {
       meta: {
         count: Codeschool.count,
-        page: 1
+        page: 0
       },
       codeschools: codeschools.as_json(include: :reviews, methods: :average_rating)
     }
