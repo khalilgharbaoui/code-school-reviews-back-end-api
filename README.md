@@ -49,3 +49,5 @@ bundle install
 rails s
 open http://localhost:3000
 ```
+
+![code school reviews](https://raw.githubusercontent.com/khalilgharbaoui/code-school-reviews-back-end-api/master/codeschoolreviews.png)
