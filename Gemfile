@@ -71,9 +71,7 @@ end
 #picture uploader
 gem 'carrierwave'
 gem 'carrierwave-base64'
-# gem 'carrierwave-google_drive'
 gem 'carrierwave-dropbox'
-
 
 #middleware and http concurency server
 gem 'rack-cors', require: 'rack/cors'
