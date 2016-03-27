@@ -1,0 +1,27 @@
+sudo: false
+language: ruby
+cache:
+  directories:
+  - vendor/bundle
+rvm:
+- 2.1.5
+addons:
+  code_climate:
+        repo_token: 2ac21e373741365d19ea1a8287cb1e33626d4bfaeae846a7c73fac42b86848a7
+  postgresql: '9.3'
+before_script:
+- cp config/database.travis.yml config/database.yml
+- RAILS_ENV=test bundle exec rake db:drop db:create db:migrate
+script:
+- bundle exec rspec spec
+deploy:
+  provider: heroku
+  api_key:
+    secure: dmYNQGEN+jGZlzDsRd6RJz6HCzgWRPj7nBUDFmsYflTxJHJYqALPZrwbmZ9ZzqknXTSCp+MEs7DNSFMi5c+tlnW4fRBbrV5/81+N2giKpVMLi3nDunYwt8+RcP0FkfkK6yIyEYlxNO4UVgaAdO6HVct2IrBW+tPy4TXkF98Uy77KsXjgyo4RhrTOgjkb+5N2+cLj3DE1qFQaqsL3xod19PzLwFyUDzS1TDewgsu5PSR/qEOqSvTFIca3MxjpTpL7b5/xNtFkgVADnA+RSsEcgajq1Jtsj+5BdXhhc0pcjIVdW7v2595dyvH2DclgRLjjf6ZOPA8Em5HN05XYgizTsu2BHkp9BViTXPSSA7YEvsej6wZzykSuOOhmwj94lpzJr2Sp8dc8+nBTZ+9zsPipf2doh/yiULfZ4tiR74nd3T1xvR8OFeyyIgx8AHEIXZTJQF6nx13N95xY2V7yO0eIXyGpATB+crI6DsMIFaJUZNP7sNeVK/phklp6FPC3ikb9u9zpwnCH7yymikU7PD2X0YrQz2HQoHOjsS9QsywBFxLJJkvCAWmJUOD5cUuPUQHhoQKntbCqnpKAnUm5K4gn+UEkOYjLXD/sAV3dU1XH8PpOAUSuEs+RB5v2LRSb4khJgOwZAcuNLLdbishfWcxw+GCU09f8mb79nwuOrwnviDU=
+  app: codeschoolreviews
+  on:
+    repo: khalilgharbaoui/code-school-reviews-back-end-api
+
+
+
+    
