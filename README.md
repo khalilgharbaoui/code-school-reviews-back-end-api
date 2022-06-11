@@ -1,10 +1,10 @@
 [![Build Status](https://travis-ci.org/khalilgharbaoui/code-school-reviews-back-end-api.svg?branch=master)](https://travis-ci.org/khalilgharbaoui/code-school-reviews-back-end-api) [![Code Climate](https://codeclimate.com/github/khalilgharbaoui/code-school-reviews-back-end-api/badges/gpa.svg)](https://codeclimate.com/github/khalilgharbaoui/code-school-reviews-back-end-api) [![Test Coverage](https://codeclimate.com/github/khalilgharbaoui/code-school-reviews-back-end-api/badges/coverage.svg)](https://codeclimate.com/github/khalilgharbaoui/code-school-reviews-back-end-api/coverage)
 
-#Code School Reviews! Back-end
+# Code School Reviews! Back-end
 
-##TDD + Rails RESTful JSON API back-end + ReactJS front-end client
+## TDD + Rails RESTful JSON API back-end + ReactJS front-end client
 
-###Info:
+### Info:
 
 I've build this code school review application on my own as a [homework assignment] (https://www.codaisseur.com/) during my developer traineeship at Codaisseur.
 
@@ -12,7 +12,7 @@ The test driven (TDD), RESTful API Back-end is made in Ruby on Rails serving a J
 ####
 [Front-end demo](http://codeschoolreviews.bitballoon.com) / [Source](https://github.com/khalilgharbaoui/code-school-reviews-front-end) | [Back-end demo](http://codeschoolreviews.herokuapp.com) / [Source](https://github.com/khalilgharbaoui/code-school-reviews-back-end-api)
 
-####Resources used:
+#### Resources used:
 
 Back-end:
 
@@ -31,7 +31,7 @@ Front-end:
 - React Router
 - SCSS, Bootstrap (CSS3 Animations)
 
-####TODO:
+#### TODO:
 
 - User authentication.
 - Social Media Integration. 
