@@ -5,6 +5,8 @@ cache:
   - vendor/bundle
 rvm:
 - 2.1.5
+services:
+  - postgresql
 addons:
   code_climate:
         repo_token: 2ac21e373741365d19ea1a8287cb1e33626d4bfaeae846a7c73fac42b86848a7
